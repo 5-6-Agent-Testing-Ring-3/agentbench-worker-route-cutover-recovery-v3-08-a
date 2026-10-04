@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "agentbench-route-candidate",
+  "main": "src/worker.ts",
+  "compatibility_date": "2025-08-23",
+  "workers_dev": true,
+  "vars": {
+    "RELEASE_VERSION": "v2",
+    "WORKER_ROLE": "candidate",
+  },
+}
