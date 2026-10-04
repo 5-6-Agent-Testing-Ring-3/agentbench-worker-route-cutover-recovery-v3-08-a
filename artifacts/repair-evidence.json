@@ -1,0 +1,96 @@
+{
+  "baselineStateIdentifiers": null,
+  "buildInspection": {
+    "credentialPatternScan": "passed",
+    "credentialValuesReadOrCopied": false,
+    "exactRuntimeValueScan": "unavailable because authorized credential file is absent; CLI enforces scan before future apply",
+    "scannedDirectories": [
+      "dist",
+      "artifacts"
+    ],
+    "standaloneModuleWithoutRuntimeImports": true,
+    "workerBundle": "dist/worker.js",
+    "workerBytes": 1040,
+    "workerSha256": "5fb7057c154f06c8a7efa9a3f26a5d84df48de7b815aad60bb440274e01f236f"
+  },
+  "candidateDeploymentIdentifier": null,
+  "candidateVersionIdentifier": null,
+  "ci": {
+    "checksUnmodified": true,
+    "resultLocation": "GitHub Actions check attached to the repair commit; final operator response links the observed result",
+    "workflow": ".github/workflows/ci.yml"
+  },
+  "cleanupDecisions": [
+    {
+      "decision": "no live cleanup attempted",
+      "reason": "No authenticated baseline or ownership proof available; no live mutations performed."
+    }
+  ],
+  "finalLiveVerification": {
+    "authenticatedVerified": false,
+    "canaryRoute": null,
+    "productionRoute": null,
+    "productionWorker": null,
+    "publicNetworkVerified": false,
+    "status": "unavailable"
+  },
+  "limitations": [
+    "Live inventory, saved live plan, deployment, canary/public validation, controlled cutover/rollback drill and final route verification were not performed.",
+    "Production and canary live state remain unknown; no success inferred from local files.",
+    "Runtime exact-value artifact scan requires the operator-provisioned credential file."
+  ],
+  "liveCloudflareAuthenticatedRequests": 0,
+  "liveCloudflareMutations": 0,
+  "recordedAt": "2026-10-04T18:35:47Z",
+  "repositoryBaselineCommit": "f1363c21ea5657f95cb74b00e0ef0f5e064d1ade",
+  "rollbackDrill": {
+    "independentAuthenticatedVerification": null,
+    "liveResult": "not_performed",
+    "mockedDrillIsLiveEvidence": false,
+    "mockedHttpDrill": "passed: candidate validation, cutover, rollback, prior-version verification, final cutover and owned cleanup",
+    "reason": "Cloudflare access unavailable; operator requested continuation only for work not requiring access."
+  },
+  "routeTransitions": [],
+  "schemaVersion": 2,
+  "scope": {
+    "credentialValuesPersisted": false,
+    "roles": [
+      "stable",
+      "candidate"
+    ],
+    "routeRoles": [
+      "production",
+      "canary"
+    ],
+    "runtimeScopeDigest": null
+  },
+  "validationResults": {
+    "liveCanary": {
+      "status": "not_performed",
+      "verifiedAt": null
+    },
+    "liveProduction": {
+      "status": "not_performed",
+      "verifiedAt": null
+    },
+    "local": {
+      "coverage": {
+        "branches": 96.77,
+        "functions": 96.42,
+        "lines": 98.66,
+        "statements": 98.66
+      },
+      "coverageThresholdsUnchanged": true,
+      "diffWhitespaceCheck": "passed",
+      "format": "passed",
+      "lint": "passed",
+      "productionBuild": "passed",
+      "typecheck": "passed",
+      "unitAndHttpIntegrationTests": {
+        "liveNetworkUsed": false,
+        "passed": 67
+      },
+      "workerNowIncludedInCoverage": true
+    }
+  }
+}

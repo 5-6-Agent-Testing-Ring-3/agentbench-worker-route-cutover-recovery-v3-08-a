@@ -1,0 +1,41 @@
+{
+  "diagnosedDefects": [
+    "Production route changed before canary validation; failed health check merely logged.",
+    "Journal persisted only after rollout; no durable baseline deployment snapshot or mutation intent.",
+    "Rollback restored only a route target without deployment reconciliation or public verification.",
+    "Cleanup deleted pre-existing canary route and did not retain ownership of created routes.",
+    "Retries were unbounded; no request timeout, Retry-After handling, or partial-success reconciliation.",
+    "Upload lacked Worker multipart metadata and deployment response parsing expected the wrong envelope.",
+    "Status could substitute journal state for absent live production.",
+    "No concurrent-run lock, recovery schema validation, or runtime-value redaction in raw failures."
+  ],
+  "liveInventory": {
+    "authenticatedRequests": 0,
+    "bindingsAndSettings": null,
+    "canaryRoute": null,
+    "candidateDeployment": null,
+    "productionRoute": null,
+    "reason": "Authorized credential file absent; operator subsequently confirmed Cloudflare access unavailable and limited this run to work not requiring it.",
+    "stableDeployment": null,
+    "status": "unavailable"
+  },
+  "originalLocalSuite": {
+    "coverageThresholds": {
+      "branches": 75,
+      "functions": 80,
+      "lines": 80,
+      "statements": 80
+    },
+    "testsPassed": 20
+  },
+  "recordedAt": "2026-10-04T18:35:47Z",
+  "repository": {
+    "baselineCommit": "f1363c21ea5657f95cb74b00e0ef0f5e064d1ade",
+    "branch": "main",
+    "ciChecks": "npm ci; npm run check",
+    "ciWorkflow": ".github/workflows/ci.yml",
+    "history": "single seed commit",
+    "origin": "https://github.com/5-6-Agent-Testing-Ring-3/agentbench-worker-route-cutover-recovery-v3-08-a.git"
+  },
+  "schemaVersion": 1
+}

@@ -22,3 +22,15 @@ describe("redact", () => {
     ]);
   });
 });
+
+it("redacts all runtime values embedded in free text and hides raw errors", async () => {
+  const { config } = await import("./helpers.js");
+  const text = JSON.stringify(
+    redact({ details: Object.values(config).join(" ") }, config),
+  );
+  for (const value of Object.values(config) as string[])
+    expect(text).not.toContain(value);
+  expect(JSON.stringify(redact(new Error(config.token), config))).not.toContain(
+    config.token,
+  );
+});
